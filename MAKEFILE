@@ -1,0 +1,21 @@
+.PHONY: all clean compile run debug test
+
+all: compile
+
+compile:
+	gcc -o number_oracle number_oracle.c -Wall -Wextra -std=c99
+
+run: compile
+	./number_oracle
+
+debug: compile
+	gdb ./number_oracle
+
+test: compile
+	# Add your test commands here
+	# For example, if you have a test script:
+	# ./run_tests.sh
+
+clean:
+	rm -f number_oracle
+	rm -f *.o
