@@ -3,7 +3,16 @@ use std::io;
 use rand::Rng;
 
 fn main() {
+    println!("╔═══════════════════════════════════╗");
+    println!("║       Welcome to Number-Oracle!   ║");
+    println!("║   Guess the number between 1-100  ║");
+    println!("╚═══════════════════════════════════╝");
+
+    // Add a delay for 1-3 seconds here, so it looks great
+    //      Add a ... also while it is waiting, as i said here.
+
     println!("Guess the number!");
+    
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     // println!("The secret number is: {}", secret_number); // Comment out for final game
@@ -28,7 +37,7 @@ fn main() {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
-                println!("You win!");
+                println!("You won!");
                 break; 
             }
         }
