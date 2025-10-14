@@ -1,0 +1,65 @@
+────────────────────────────────────────────
+    NUMBER ORACLE — ARCHITECTURAL DIAGRAM
+────────────────────────────────────────────
+
+┌────────────────────────────────────────────┐
+│                  USER                      │
+│  • Enters a guess via terminal input       │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│               INPUT LAYER                  │
+│  Source: std::io::stdin()                  │
+│  • Reads user input                        │
+│  • Uses &mut String reference              │
+│  • Validates conversion to number (u32)    │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌──────────────────────────────────────────────────┐
+│             GAME LOGIC LAYER                     │
+│  Modules Used:                                   │
+│   • rand::Rng → Generates secret number          │
+│   • std::cmp::Ordering → Compares values         │
+│                                                  │
+│  Process:                                        │
+│   1. Generate random number (1–100)              │
+│   2. Compare guess with secret_number            │
+│   3. Output result (Too small / Too big / Win)   │
+│   4. Loop until correct                          │
+└─────────────────────────────────────────────── ──┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│             OUTPUT LAYER                   │
+│  Destination: Terminal                     │
+│  • Prints feedback messages                │
+│  • Displays result when guessed correctly  │
+└────────────────────────────────────────────┘
+                      │
+                      ▼
+┌────────────────────────────────────────────┐
+│               END STATE                    │
+│  • Loop breaks on win                      │
+│  • Program terminates gracefully           │
+│  • Returns control to OS                   │
+└────────────────────────────────────────────┘
+
+────────────────────────────────────────────
+               DEPENDENCIES
+────────────────────────────────────────────
+• std::io — input/output handling
+• rand — random number generation
+• std::cmp::Ordering — result comparison
+────────────────────────────────────────────
+            STRUCTURE OVERVIEW
+────────────────────────────────────────────
+main.rs
+ ├── Input Section
+ │    └── Reads user input into String
+ ├── Logic Section
+ │    └── Generates & compares numbers
+ └── Output Section
+      └── Prints result messages
+────────────────────────────────────────────

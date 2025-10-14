@@ -7,8 +7,8 @@
 ---
 
 ### Overview
-**Number Oracle** is a simple command-line guessing game written in Rust.  
-It randomly selects a number between 1 and 100 and lets the player keep guessing until they find the correct one.
+**Number Oracle** is a simple terminal guessing game written in Rust.  
+It randomly selects a number between 1 and 100 and lets the player keep guessing until they find the correct one. If the number guessed is bigger then the number genrated, it says Too Big, if low it says low.
 
 ---
 
@@ -16,6 +16,11 @@ It randomly selects a number between 1 and 100 and lets the player keep guessing
 - Rust (Edition 2024)  
 - Cargo (package manager)  
 - `rand` crate for RNG  
+
+---
+### Architechtural Diagram
+- It’s simple, logical, and exactly how the Number Oracle works.
+- Open the 'Architectural Diagram.txt' in the main directory
 
 ---
 
