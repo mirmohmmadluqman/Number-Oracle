@@ -20,4 +20,4 @@ Wait for user input → guess = "2\n"
   ↓
 Print "You guessed: 2"
   ↓
-END
+END 
