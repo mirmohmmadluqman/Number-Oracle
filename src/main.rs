@@ -6,6 +6,7 @@ fn main() {
     println!("╔═══════════════════════════════════╗");
     println!("║       Welcome to Number-Oracle!   ║");
     println!("║   Guess the number between 1-100  ║");
+    println!("║             Get Started           ║");
     println!("╚═══════════════════════════════════╝");
 
     // Add a delay for 1-3 seconds here, so it looks great
