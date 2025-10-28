@@ -12,12 +12,6 @@ It randomly selects a number between 1 and 100 and lets the player keep guessing
 
 ---
 
-### Tech Stack
-- Rust (Edition 2024)  
-- Cargo (package manager)  
-- `rand` crate for RNG  
-
----
 ### Architechtural Diagram
 - It’s simple, logical, and exactly how the Number Oracle works.
 - Open the 'Architectural Diagram.txt' in the main directory
